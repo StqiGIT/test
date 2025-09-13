@@ -75,7 +75,7 @@ while true; do
 		ext4)
 			mkfs.fat -F 32 "$efi_partition" > /dev/null
 			mkswap "$swap_partition" > /dev/null
-			y | mkfs.ext4 "$root_partition" > /dev/null
+			yes | mkfs.ext4 "$root_partition" > /dev/null
 			root_filesystem_progs="e2fsprogs"
 			fsck_check="0 2"
 			break
